@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Calculator</h1>
+
+    <form id="budget-form">
+      <input type="number" id="total-budget" placeholder="Enter total budget" required />
+      <button type="submit">Set Budget</button>
+    </form>
+
+    <form id="expense-form" style="display: none;">
+      <input type="text" id="expense-name" placeholder="Item name" required />
+      <input type="number" id="expense-amount" placeholder="Amount" required />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <ul id="expense-list"></ul>
+
+    <h2>Total Expenses: ৳<span id="total-expenses">0</span></h2>
+    <h2>Remaining Budget: ৳<span id="remaining-budget">0</span></h2>
+  </div>
+
+  <script src="budget.js"></script>
+</body>
+</html>
