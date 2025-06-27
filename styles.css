@@ -167,6 +167,10 @@ h2 {
 
 /***** Print Styles *****/
 @media print {
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         background: white !important;
         color: black;
@@ -178,7 +182,7 @@ h2 {
     .container {
         box-shadow: none;
         border: none;
-        width: 100%;
+        width: 90%;
         max-width: 100%;
         padding: 10px;
     }
@@ -197,22 +201,37 @@ h2 {
         margin-bottom: 20px;
     }
 
+    ul {
+        padding-left: 0;
+        margin: 0;
+        list-style: none;
+    }
+
     ul li {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 5px 0;
         border-bottom: 1px dashed #ccc;
         font-size: 14px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     ul li span:first-child {
         text-align: left;
         flex: 1;
+        margin-right: 10px;
+        max-width: 60%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     ul li span:nth-child(2) {
         text-align: right;
-        min-width: 80px;
+        min-width: 70px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     h2 {
@@ -232,4 +251,3 @@ h2 {
         margin: 20mm;
     }
 }
-
